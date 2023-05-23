@@ -5,17 +5,17 @@ public class TasksTest {
 
     @Test
     public void testEpic() {
-        String[] subtasks = {"молоко", "яйца", "хлеб"};
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic epic = new Epic(55, subtasks);
 
         Epic epicEmpty = new Epic(55, new String[]{});
 
-        Assertions.assertTrue(epic.matches("молоко"));
-        Assertions.assertTrue(epic.matches("яйца"));
-        Assertions.assertTrue(epic.matches("хлеб"));
-        Assertions.assertFalse(epic.matches("яйцо"));
-        Assertions.assertFalse(epic.matches("млоко"));
-        Assertions.assertFalse(epicEmpty.matches("хлеб"));
+        Assertions.assertTrue(epic.matches("Молоко"));
+        Assertions.assertTrue(epic.matches("Яйца"));
+        Assertions.assertTrue(epic.matches("Хлеб"));
+        Assertions.assertFalse(epic.matches("Яйцо"));
+        Assertions.assertFalse(epic.matches("Млоко"));
+        Assertions.assertFalse(epicEmpty.matches("Хлеб"));
     }
 
     @Test
